@@ -2,16 +2,14 @@
   let count: number = 0
   const increment = () => {
     count += 1
+    if ( count == 1 ) {
+      setTimeout(() =>{
+        console.log("Hiciste " + count*3 + " clicks por minuto!!")
+      }, 20000)
+    }
   }
   const reset = () => {
     count = 0
-  }
-  const timer = () => {
-    if ( count == 1 ) {
-      setTimeout() {
-        
-      }
-    }
   }
 </script>
 
