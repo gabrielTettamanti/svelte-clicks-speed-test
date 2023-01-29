@@ -1,10 +1,12 @@
 <script lang="ts">
-  let count: number = 0
+  let count: any = 0
   const increment = () => {
-    count += 1
+    if ( typeof count == 'number') {
+      count += 1
+    }
     if ( count == 1 ) {
       setTimeout(() =>{
-        console.log("Hiciste " + count*3 + " clicks por minuto!!")
+        count = count*3 + " clicks/min"
       }, 20000)
     }
   }
@@ -26,7 +28,7 @@
     width: 90vw;
     max-width: 500px;
     height: 200px;
-    font-size: 10em;
+    font-size: 3em;
     margin: 15px auto;
     color: white;
     display: flex;
