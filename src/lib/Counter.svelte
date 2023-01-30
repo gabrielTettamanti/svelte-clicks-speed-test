@@ -8,7 +8,7 @@
     if ( count == 1 ) {
       timeoutID = setTimeout(() =>{
         count = count*3 + " clicks/min"
-      }, 2000)
+      }, 20000)
     }
   }
   const reset = () => {
