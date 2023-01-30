@@ -5,7 +5,7 @@
   let timeoutID
   let intervalID
   let timeLeft = 20
-  let board: Array<String> = []
+  let board: Number[] = []
     
     const increment = () => {
       if ( typeof count == 'number') {
@@ -13,8 +13,9 @@
       }
       if ( count == 1 ) {
         timeoutID = setTimeout(() =>{
-          count = count*3 + " Cs/m"
-          board = [...board, count]
+          let result: Number = count*3
+          count = result + " Cs/m"
+          board = [...board, result].sort(function(a, b){return a.valueOf() - b.valueOf()}).reverse();
       }, 20000)
       intervalID = setInterval(function() {
         timeLeft--
