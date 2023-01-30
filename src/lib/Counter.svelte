@@ -1,6 +1,9 @@
 <script lang="ts">
   let count: any = 0
   let timeoutID
+  let intervalID
+  let timeLeft = 20
+
   const increment = () => {
     if ( typeof count == 'number') {
       count += 1
@@ -9,11 +12,21 @@
       timeoutID = setTimeout(() =>{
         count = count*3 + " clicks/min"
       }, 20000)
+      intervalID = setInterval(function() {
+        timeLeft--
+        if (timeLeft == 0) {
+          clearInterval(intervalID);
+          timeLeft = 20
+        }
+      }, 1000);
     }
   }
+
   const reset = () => {
       count = 0
       clearTimeout(timeoutID)
+      clearInterval(intervalID)
+      timeLeft = 20
   }
 </script>
 
@@ -21,9 +34,15 @@
 <button type="button" class="counter-button click-button" on:click={increment}>
   Click
 </button>
-<button type="button" class="counter-button reset-button" on:click={reset}>
-  Reset
-</button>
+{#if typeof count != 'number'}
+  <button type="button" class="counter-button reset-button" on:click={reset}>
+    Reset
+  </button>
+{:else}
+  <button type="button" class="counter-button reset-button" on:click={reset}>
+    {timeLeft + 's'}
+  </button>
+{/if}
 
 <style lang="scss">
   .card{
