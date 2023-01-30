@@ -1,17 +1,19 @@
 <script lang="ts">
   let count: any = 0
+  let timeoutID
   const increment = () => {
     if ( typeof count == 'number') {
       count += 1
     }
     if ( count == 1 ) {
-      setTimeout(() =>{
+      timeoutID = setTimeout(() =>{
         count = count*3 + " clicks/min"
-      }, 20000)
+      }, 2000)
     }
   }
   const reset = () => {
-    count = 0
+      count = 0
+      clearTimeout(timeoutID)
   }
 </script>
 
