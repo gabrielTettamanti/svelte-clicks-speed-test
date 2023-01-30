@@ -1,18 +1,21 @@
 <script lang="ts">
+  export let board: Array<String>
 </script>
 
 <div class="board-container">
-  <div class="board-item">
-    <p class="board-mark">600 Cs/m</p>
-    <div class="board-item-icons">
-      <div class="board-item-icon board-share-icon">
-        <i class="fa-solid fa-share-nodes" />
-      </div>
-      <div class="board-item-icon board-xmark-icon">
-        <i class="fa-solid fa-xmark" />
+  {#each board as item}
+    <div class="board-item">
+      <p class="board-mark">{ item }</p>
+      <div class="board-item-icons">
+        <div class="board-item-icon board-share-icon">
+          <i class="fa-solid fa-share-nodes" />
+        </div>
+        <div class="board-item-icon board-xmark-icon">
+          <i class="fa-solid fa-xmark" />
+        </div>
       </div>
     </div>
-  </div>
+  {/each}
 </div>
 
 <style lang="scss">

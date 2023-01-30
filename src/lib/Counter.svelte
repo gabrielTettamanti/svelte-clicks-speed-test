@@ -5,14 +5,16 @@
   let timeoutID
   let intervalID
   let timeLeft = 20
-
-  const increment = () => {
-    if ( typeof count == 'number') {
-      count += 1
-    }
-    if ( count == 1 ) {
-      timeoutID = setTimeout(() =>{
-        count = count*3 + " Cs/m"
+  let board: Array<String> = []
+    
+    const increment = () => {
+      if ( typeof count == 'number') {
+        count += 1
+      }
+      if ( count == 1 ) {
+        timeoutID = setTimeout(() =>{
+          count = count*3 + " Cs/m"
+          board = [...board, count]
       }, 20000)
       intervalID = setInterval(function() {
         timeLeft--
@@ -45,7 +47,7 @@
     {timeLeft + 's'}
   </button>
 {/if}
-<Board />
+<Board board={ board }/>
 
 <style lang="scss">
   .card{
