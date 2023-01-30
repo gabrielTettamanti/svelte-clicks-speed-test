@@ -34,7 +34,7 @@
 <button type="button" class="counter-button click-button" on:click={increment}>
   Click
 </button>
-{#if typeof count != 'number'}
+{#if typeof count != 'number' || timeLeft == 20}
   <button type="button" class="counter-button reset-button" on:click={reset}>
     Reset
   </button>
