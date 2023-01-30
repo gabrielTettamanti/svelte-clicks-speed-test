@@ -39,7 +39,7 @@
     Reset
   </button>
 {:else}
-  <button type="button" class="counter-button reset-button" on:click={reset}>
+  <button type="button" class="counter-button reset-button timer-button" on:click={reset}>
     {timeLeft + 's'}
   </button>
 {/if}
@@ -86,5 +86,44 @@
     }
     .reset-button {
       background-color: #bd34fe;
+    }
+    .timer-button {
+      transition: 1s;
+      animation-name: shadow-second;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .timer-button:hover {
+      background-color: gray;
+      color: red;
+      border: red 2px solid;
+    }
+    @keyframes shadow-second {
+      0% {
+        box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+        -webkit-box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+        -moz-box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+      }
+      25% {
+        box-shadow: 10px 0px 25px 15px rgba(189,52,254,0.9);
+        -webkit-box-shadow: 10px 0px 25px 15px rgba(189,52,254,0.9);
+        -moz-box-shadow: 10px 0px 25px 15px rgba(189,52,254,0.9);
+      }
+      50% {
+        box-shadow: 0px 10px 25px 15px rgba(189,52,254,0.9);
+        -webkit-box-shadow: 0px 10px 25px 15px rgba(189,52,254,0.9);
+        -moz-box-shadow: 0px 10px 25px 15px rgba(189,52,254,0.9);
+      }
+      75% {
+        box-shadow: -10px 0px 25px 15px rgba(189,52,254,0.9);
+        -webkit-box-shadow: -10px 0px 25px 15px rgba(189,52,254,0.9);
+        -moz-box-shadow: -10px 0px 25px 15px rgba(189,52,254,0.9);
+      }
+      100% {
+        box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+        -webkit-box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+        -moz-box-shadow: 0px -10px 25px 15px rgba(189,52,254,0.9);
+      }
     }
 </style>
