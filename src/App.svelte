@@ -19,8 +19,8 @@
 
 <style>
   .logo {
-    height: 6em;
-    padding: 1.5em;
+    height: 7em;
+    padding: 1em;
     will-change: filter;
   }
   .logo:hover {
