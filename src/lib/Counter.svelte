@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Board from "./Board.svelte";
+
   let count: any = 0
   let timeoutID
   let intervalID
@@ -43,6 +45,7 @@
     {timeLeft + 's'}
   </button>
 {/if}
+<Board />
 
 <style lang="scss">
   .card{
