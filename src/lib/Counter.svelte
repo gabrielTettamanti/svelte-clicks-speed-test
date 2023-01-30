@@ -10,7 +10,7 @@
     }
     if ( count == 1 ) {
       timeoutID = setTimeout(() =>{
-        count = count*3 + " clicks/min"
+        count = count*3 + " Cs/m"
       }, 20000)
       intervalID = setInterval(function() {
         timeLeft--
@@ -48,8 +48,8 @@
   .card{
     width: 90vw;
     max-width: 500px;
-    height: 200px;
-    font-size: 3em;
+    min-height: 150px;
+    font-size: 4.5em;
     margin: 15px auto;
     color: white;
     display: flex;
