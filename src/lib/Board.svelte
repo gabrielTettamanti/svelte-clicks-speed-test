@@ -6,7 +6,7 @@
 <div class="board-container">
   {#each board as item}
     <div class="board-item">
-      <p class="board-mark">{ item }</p>
+      <p class="board-mark">{ item + ' Cs/m' }</p>
       <div class="board-item-icons">
         <div class="board-item-icon board-share-icon">
           <i class="fa-solid fa-share-nodes" />
