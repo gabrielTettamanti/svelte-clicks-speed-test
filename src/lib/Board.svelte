@@ -7,14 +7,6 @@
   {#each board as item, i}
     <div class={`board-item ${'position-' + i}`}>
       <p class="board-mark">{ item + ' Cs/m' }</p>
-      <!-- <div class="board-item-icons">
-        <div class="board-item-icon board-share-icon">
-          <i class="fa-solid fa-share-nodes" />
-        </div>
-        <div class="board-item-icon board-xmark-icon">
-          <i class="fa-solid fa-xmark" />
-        </div>
-      </div> -->
     </div>
   {/each}
 </div>
@@ -48,27 +40,4 @@
         font-size: 1.5em;
         margin: auto;
       }
-      // .board-item-icons {
-      //   color: #242424;
-      //   font-size: 1em;
-      //   display: flex;
-      // }
-      //   .board-item-icon {
-      //     display: flex;
-      //     justify-content: center;
-      //     align-items: center;
-      //     width: 70px;
-      //     height: 28px;
-      //     padding: 10px;
-      //     margin: 15px;
-      //     border-radius: 20px;
-      //     background-color: white;
-      //     transition: .5s;
-      //   }
-      //   .board-share-icon:hover {
-      //     background-color: #25D366;
-      //   }
-      //   .board-xmark-icon:hover {
-      //     background-color: red;
-      //   }
 </style>
