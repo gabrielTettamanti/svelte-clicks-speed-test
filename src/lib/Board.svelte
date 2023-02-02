@@ -4,8 +4,8 @@
 </script>
 
 <div class="board-container">
-  {#each board as item}
-    <div class="board-item">
+  {#each board as item, i}
+    <div class={`board-item ${'position-' + i}`}>
       <p class="board-mark">{ item + ' Cs/m' }</p>
       <!-- <div class="board-item-icons">
         <div class="board-item-icon board-share-icon">
@@ -34,6 +34,15 @@
       width: 90%;
       height: 30px;
       color: white;
+    }
+    .position-0 {
+      background-color: gold;
+    }
+    .position-1 {
+      background-color: silver;
+    }
+    .position-2 {
+      background-color: #cd7f32;
     }
       .board-mark {
         font-size: 1.5em;
