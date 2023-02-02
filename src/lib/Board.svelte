@@ -52,5 +52,6 @@
       .board-mark {
         font-size: 1.5em;
         margin: 0 20px;
+        min-width: 100px;
       }
 </style>
