@@ -54,4 +54,11 @@
         margin: 0 20px;
         min-width: 100px;
       }
+  @media (max-width: 480px) {
+    .board-mark {
+      font-size: 1.5em;
+      margin: 0 2px;
+      min-width: 0px;
+    }
+  }
 </style>
