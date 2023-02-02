@@ -4,25 +4,26 @@
 
 <div class="board-container">
   {#each board as item, i}
-    <div class={`board-item ${'position-' + i}`}>
-      <p class="board-mark">{ item + ' Cs/m' }</p>
-    </div>
+    {#if i < 5}
+      <div class={`board-item ${'position-' + i}`}>
+        <p class="board-mark">{ item + ' Cs/m' }</p>
+      </div>
+    {/if}
   {/each}
 </div>
 
 <style lang="scss">
   .board-container {
-    border: 1px solid #fff017c4;
+    border: 1px solid #fff0172c;
     width: 90vw;
     max-width: 500px;
     margin: 15px auto;
   }
     .board-item {
-      margin: 5px auto;
+      margin: 5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 90%;
       height: 30px;
       color: white;
     }
