@@ -1,6 +1,5 @@
 <script lang="ts">
   export let board: Number[]
-  // export let orderedBoard: Number[] = board.sort(function(a, b){return a.valueOf() - b.valueOf()});
 </script>
 
 <div class="board-container">
